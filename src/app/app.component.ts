@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app-rutas';
+  navLinks = [
+    { label: 'Home', route: '/' },
+    { label: 'About', route: '/about' },
+    { label: 'Posts', route: '/posts' },
+    { label: 'Users', route: '/users' }
+  ];
 }

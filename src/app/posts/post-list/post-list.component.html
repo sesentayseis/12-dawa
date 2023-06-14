@@ -1,0 +1,14 @@
+<div class="container" style="padding-top: 2%;">
+<h2>List of Posts</h2>
+<ul>
+  <li *ngFor="let post of posts" (click)="showDetails(post)">
+    {{ post.title }}
+  </li>
+</ul>
+
+<div *ngIf="selectedPost">
+  <h2>Post Details</h2>
+  <h3>{{ selectedPost.title }}</h3>
+  <p>{{ selectedPost.content }}</p>
+</div>
+</div>

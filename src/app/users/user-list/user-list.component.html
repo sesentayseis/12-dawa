@@ -1,0 +1,34 @@
+<div class="container" style="padding-top: 2%;">
+<ul>
+<li *ngFor="let user of users">
+    {{ user.name }}
+    <button (click)="showDetails(user) " class="btn btn-outline-primary">Ver detalles</button>
+</li>
+</ul>
+
+
+
+<table class="table caption-top">
+    <caption>Detalles del usuario</caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="selectedUser">
+        <th scope="row"> {{ selectedUser.id }}</th>
+        <td>{{ selectedUser.name }}</td>
+        <td>{{ selectedUser.email }}</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+
+  
